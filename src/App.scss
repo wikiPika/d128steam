@@ -1,0 +1,240 @@
+$gray: #A9A9C5;
+$lightblue: #8993d7;
+$nightblue: #4F5069;
+$darkblue: #0b0b22;
+
+* {
+    box-sizing: border-box;
+
+    font-family: Karla, sans-serif
+}
+
+.f-col-sc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.f-col-ss {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.f-col-cc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-col-ct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.f-row-cc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-row-ct {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.f-row-cs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.f-row-bc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-bar {
+    height: 1px;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+.apex {
+    width: 100%;
+    height: 100rem;
+}
+
+.top-vanta {
+    width: 100%;
+    height: 36rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    box-shadow: 4px 4px 0 $lightblue;
+}
+
+.top-logo {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.top-title {
+    font-size: 600%;
+    font-weight: bolder;
+    text-shadow: 4px 4px 0 black;
+    color: white;
+}
+
+.top-subtitle {
+    font-size: 200%;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.top-button {
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-top: 3rem;
+
+    color: white;
+    font-size: 200%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.f-grow {flex-grow: 1;}
+.f-shrink {flex-shrink: 1;}
+.w-100 {width: 100%;}
+
+.body {
+    background-color: $nightblue;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-image: url("./img/bg.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.banner {
+    background-color: $darkblue;
+    margin-bottom: 4rem;
+    height: 20rem;
+    box-shadow: 4px 4px 0 $lightblue;
+}
+
+.banner-left-img {
+    clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 0);
+}
+
+.banner-right-img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.banner-left-img, .banner-right-img {
+    object-fit: cover;
+    width: 100%;
+    height: 20rem;
+    transform: translate(0, 2px);
+}
+
+.img-container {
+    width: 60rem;
+}
+
+.banner-desc {
+    padding: 0 4rem 0 4rem;
+    min-width: 30rem;
+    max-width: 30rem;
+}
+
+.banner-desc > *:first-child {
+    margin-bottom: 0.5rem;
+}
+
+.banner-desc-title {
+    font-size: 300%;
+    font-weight: bold;
+    color: white;
+}
+
+.banner-desc-subtitle {
+    font-size: 100%;
+    color: white;
+}
+
+.banner-sponsors {
+    width: 120rem;
+    color: white;
+}
+
+.columns {
+    width: min(100%, 68rem);
+}
+
+.left-column, .right-column {
+    width: 50%;
+}
+
+.card {
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    min-width: 30rem;
+    max-width: 30rem;
+    border-radius: 1rem;
+    background-color: $darkblue;
+    box-shadow: 4px 4px 0 $lightblue;
+}
+
+.card-title {
+    font-size: 300%;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.card-bold {
+    color: $lightblue;
+    font-weight: bold;
+}
+
+.link {
+    cursor: pointer;
+    border-bottom: 1px solid $lightblue;
+}
+
+.card-blip {
+    height: 3rem;
+    width: 80%;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.card-blip-date {
+    font-size: 100%;
+    font-weight: bold;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+    border-right: 1px solid white;
+    height: 1.25rem;
+}
+
+.footer {
+    align-self: flex-end;
+    background-color: $darkblue;
+    padding: 0.5rem;
+    color: white;
+}
