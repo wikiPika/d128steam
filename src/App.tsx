@@ -171,7 +171,7 @@ function App() {
                                         <div>
                                             <span className="card-bold link" onClick={() => window.open("mailto:adam.lueken@d128.org", "_self")}
                                                   style={{
-                                                      fontSize: "75%",
+                                                      fontSize: "70%",
                                                   }}
                                             >
                                                 adam.lueken@d128.org
@@ -187,7 +187,7 @@ function App() {
                                         <div>
                                             <span className="card-bold link" onClick={() => window.open("mailto:shayna.weinstein@dvhhscougars.org", "_self")}
                                                   style={{
-                                                      fontSize: "75%",
+                                                      fontSize: "70%",
                                                   }}
                                             >
                                                 shayna.weinstein@vhhscougars.org
@@ -203,7 +203,7 @@ function App() {
                                         <div>
                                             <span className="card-bold link" onClick={() => window.open("mailto:jackie.liu@vhhscougars.org", "_self")}
                                                   style={{
-                                                      fontSize: "75%",
+                                                      fontSize: "70%",
                                                   }}
                                             >
                                                 jackie.liu@vhhscougars.org
