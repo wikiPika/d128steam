@@ -91,6 +91,7 @@ $darkblue: #0b0b22;
 }
 
 .top-title {
+    text-align: center;
     font-size: 600%;
     font-weight: bolder;
     text-shadow: 4px 4px 0 black;
@@ -112,6 +113,7 @@ $darkblue: #0b0b22;
 
     color: white;
     font-size: 200%;
+    text-shadow: 2px 2px black;
     background-color: rgba(255, 255, 255, 0);
 }
 
@@ -122,10 +124,8 @@ $darkblue: #0b0b22;
 .body {
     background-color: $nightblue;
     padding-top: 4rem;
-    padding-bottom: 4rem;
-    background-image: url("./img/bg.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-image: url("./img/stacked-waves-haikei.svg");
+    background-size: cover;
 }
 
 .banner {
@@ -150,8 +150,47 @@ $darkblue: #0b0b22;
     transform: translate(0, 2px);
 }
 
+.sponsors-card {
+    width: min(90%, 64rem);
+    border-radius: 1rem;
+    background-color: $darkblue;
+    box-shadow: 4px 4px 0 $lightblue;
+    padding: 2rem;
+}
+
+.p-4 {
+    padding-bottom: 4rem;
+}
+
+.sponsors-card-text {
+    text-align: end;
+    font-size: 200%;
+    font-weight: bold;
+    padding-right: 0.5rem;
+    border-right: 1px solid white;
+}
+
+.sponsors-card-box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.sponsors-gold {
+    color: goldenrod;
+}
+
+.sponsors-silver {
+    color: silver;
+}
+
+.sponsors-bronze {
+    color: darkorange;
+}
+
 .img-container {
-    width: 60rem;
+
 }
 
 .banner-desc {
@@ -175,17 +214,16 @@ $darkblue: #0b0b22;
     color: white;
 }
 
-.banner-sponsors {
-    width: 120rem;
-    color: white;
-}
-
 .columns {
     width: min(100%, 68rem);
 }
 
 .left-column, .right-column {
     width: 50%;
+}
+
+.left-column {
+    padding-top: 16rem;
 }
 
 .card {
@@ -217,7 +255,7 @@ $darkblue: #0b0b22;
 }
 
 .card-blip {
-    height: 3rem;
+    min-height: 3rem;
     width: 80%;
     color: white;
     padding-bottom: 1rem;
@@ -230,6 +268,11 @@ $darkblue: #0b0b22;
     margin-right: 0.5rem;
     border-right: 1px solid white;
     height: 1.25rem;
+}
+
+.convenient-spacer {
+    width: 1px;
+    height: 2rem;
 }
 
 .footer {

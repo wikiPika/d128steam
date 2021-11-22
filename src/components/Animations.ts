@@ -26,20 +26,6 @@ export function animOpacity(duration: number) {
     }
 }
 
-export function animBounceUp(y: number, stiffness: number, delay: number = 0, damping: number = 10, mass: number = 1) {
-    return {
-        inactive: {
-            y: y + "px",
-            opacity: 0,
-        },
-        active: {
-            y: "0px",
-            opacity: 1,
-            transition: transitSpring(stiffness, delay, damping, mass)
-        }
-    }
-}
-
 export function animBounceRight(x: number, stiffness: number, delay: number = 0, damping: number = 10, mass: number = 1) {
     return {
         inactive: {
@@ -51,20 +37,6 @@ export function animBounceRight(x: number, stiffness: number, delay: number = 0,
             opacity: 1,
             transition: transitSpring(stiffness, delay, damping, mass)
         }
-    }
-}
-
-export function animScale(initX: number, initY: number, finX: number, finY: number, stiffness: number, delay: number = 0, damping: number = 10, mass: number = 1) {
-    return {
-        inactive: {
-            transform: `scale(${initX}, ${initY})`,
-            opacity: 0,
-        },
-        active: {
-            transform: `scale(${finX}, ${finY})`,
-            opacity: 1,
-            transition: transitSpring(stiffness, delay, damping, mass)
-        },
     }
 }
 
