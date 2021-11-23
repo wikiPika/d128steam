@@ -14,7 +14,7 @@ import Holder from "holderjs"
 
 // @ts-ignore
 import NET from "vanta/dist/vanta.net.min"
-import {animBounceRight, animOpacity} from "./components/Animations";
+import {animBounceRight, animOpacity, transitSpring} from "./components/Animations";
 
 function App() {
     const [vantaEffect, setVantaEffect] = useState<any>()
@@ -101,7 +101,7 @@ function App() {
                     </div>
                 </div>
                 <div className="p-4 w-100 f-col-cc">
-                    <motion.div className="sponsors-card f-row-cs"
+                    <motion.div className="sponsors-card f-row-ct"
                                 variants={animOpacity(2)}
                                 initial="inactive"
                                 whileInView="active"
@@ -116,7 +116,7 @@ function App() {
                     </motion.div>
                 </div>
                 <div className="p-4 w-100 f-col-cc">
-                    <motion.div className="sponsors-card f-row-cs"
+                    <motion.div className="sponsors-card f-row-ct"
                                 variants={animOpacity(2)}
                                 initial="inactive"
                                 whileInView="active"
@@ -131,7 +131,7 @@ function App() {
                     </motion.div>
                 </div>
                 <div className="p-4 w-100 f-col-cc">
-                    <motion.div className="sponsors-card f-row-cs"
+                    <motion.div className="sponsors-card f-row-ct"
                                 variants={animOpacity(2)}
                                 initial="inactive"
                                 whileInView="active"
@@ -190,7 +190,12 @@ function CardBlip(props: {
         <motion.div className={"card-blip f-row-cs"}
                     variants={animOpacity(2)}
                     initial="inactive"
+                    whileHover={{
+                        borderRadius: "1px solid white",
+                        transition: transitSpring(125, 0, 40)
+                    }}
                     whileInView="active"
+
                     viewport={{once: true,}}
         >
             <div className="card-blip-date" style={{minWidth: props.size + "rem", maxWidth: props.size + "rem", textAlign: "end",}}>
@@ -200,6 +205,22 @@ function CardBlip(props: {
                 {props.children}
             </div>
         </motion.div>
+    )
+}
+
+function ClickableImg(props: {
+    src: string,
+}) {
+    return (
+        <motion.img style={{
+                        cursor: "pointer",
+                    }}
+                    variants={animOpacity(2)}
+                    initial="inactive"
+                    whileInView="active"
+                    viewport={{once: true,}}>
+            src={props.src}
+        </motion.img>
     )
 }
 

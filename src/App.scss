@@ -166,8 +166,8 @@ $darkblue: #0b0b22;
     text-align: end;
     font-size: 200%;
     font-weight: bold;
-    padding-right: 0.5rem;
-    border-right: 1px solid white;
+    padding-right: 1rem;
+    min-width: 16rem;
 }
 
 .sponsors-card-box {
@@ -175,6 +175,7 @@ $darkblue: #0b0b22;
     padding-right: 2rem;
     color: white;
     font-weight: bold;
+    border-left: 1px solid white;
 }
 
 .sponsors-gold {
