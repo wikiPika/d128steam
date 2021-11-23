@@ -111,7 +111,7 @@ function App() {
                             Gold Sponsors
                         </div>
                         <div className="sponsors-card-box f-grow f-col-sc">
-                            <img src="https://www.myrobothink.com/wp-content/uploads/2020/01/logo-with-slogan.png" />
+                            <ClickableImg link="https://www.myrobothink.com/" src="https://www.myrobothink.com/wp-content/uploads/2020/01/logo-with-slogan.png" />
                         </div>
                     </motion.div>
                 </div>
@@ -162,7 +162,9 @@ function App() {
                             paddingTop: "0rem",
                         } : {}} layout>
                             {rubricCard}
+                            {prizeCard}
                             {contactCard}
+
                         </motion.div>
                         <motion.div className="right-column f-col-sc" style={screenWidth <= 1152 ? {
                             width: "100%",
@@ -190,12 +192,7 @@ function CardBlip(props: {
         <motion.div className={"card-blip f-row-cs"}
                     variants={animOpacity(2)}
                     initial="inactive"
-                    whileHover={{
-                        borderRadius: "1px solid white",
-                        transition: transitSpring(125, 0, 40)
-                    }}
                     whileInView="active"
-
                     viewport={{once: true,}}
         >
             <div className="card-blip-date" style={{minWidth: props.size + "rem", maxWidth: props.size + "rem", textAlign: "end",}}>
@@ -210,16 +207,27 @@ function CardBlip(props: {
 
 function ClickableImg(props: {
     src: string,
+    link: string,
+    children?: any,
 }) {
     return (
         <motion.img style={{
                         cursor: "pointer",
+
                     }}
                     variants={animOpacity(2)}
                     initial="inactive"
+                    whileHover={
+                        {
+                            filter: "opacity(0.7)",
+                        }
+                    }
                     whileInView="active"
-                    viewport={{once: true,}}>
-            src={props.src}
+                    viewport={{once: true,}}
+                    src={props.src}
+                    onClick={() => {window.open(props.link, )}}
+        >
+            {props.children}
         </motion.img>
     )
 }
@@ -319,6 +327,30 @@ const rubricCard = <div className="f-col-sc">
         </CardBlip>
         <CardBlip date={"10pts."} size={4}>
             <span className="card-bold">Presentation:</span> How professional and engaging is it?
+        </CardBlip>
+    </motion.div>
+</div>
+
+const prizeCard = <div className="f-col-sc">
+    <motion.div className="card f-col-sc"
+                variants={animBounceRight(-300, 125, 0.5, 40)}
+                initial="inactive"
+                whileInView="active"
+                viewport={{once: true}}
+    >
+        <div className="card-title">
+            Prizes
+            <div className={"h-bar"} />
+        </div>
+        <CardBlip date={<div>Individual</div>} size={6}>
+            The top 3 projects per category win prizes between <span className="card-bold">$25-$100</span>.
+        </CardBlip>
+        <CardBlip date={<div>Overall</div>} size={6}>
+            <div className="f-col-ct">
+                <div>Projects that enter three or more categories are entered for the overall category with their average score.</div>
+                <br />
+                <div>The top 3 projects overall win prizes between <span className="card-bold">$200-$500</span>, including iPads.</div>
+            </div>
         </CardBlip>
     </motion.div>
 </div>
