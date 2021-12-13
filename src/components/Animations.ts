@@ -35,7 +35,7 @@ export function animBounceRight(x: number, stiffness: number, delay: number = 0,
         active: {
             x: "0px",
             opacity: 1,
-            transition: transitSpring(stiffness, delay, damping, mass)
+            transition: transitSpring(stiffness, delay, damping, mass),
         }
     }
 }
